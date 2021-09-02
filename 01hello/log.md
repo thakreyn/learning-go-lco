@@ -10,11 +10,14 @@
     6. Function decleration
 
         ```go
-        func <name>()
-        {
+        func <name>() {
             . . . 
         }
         ```
     7. `go run <filename>` runs the file, but does not build the executables.
+    8. The main essence of go is that the code should not have many interpretations. It should be easily readable. No 
+    ambiguity and only one obvious way of doing things (like python).
+    
+    > Simplicity is Complex. It needs to have its own identity and not converge.
 
     
