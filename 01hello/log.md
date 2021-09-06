@@ -20,4 +20,9 @@
     
     > Simplicity is Complex. It needs to have its own identity and not converge.
 
-    
+* 4th September 2021
+
+    1. Details about the Go lexer.
+    2. How Go lexer automatically imports the requried packages, ignores semicolons etc.
+    3. Everything in Go is a type.
+    4. For access modifiers, first letter is important. lowercase -> private and uppercase -> public
