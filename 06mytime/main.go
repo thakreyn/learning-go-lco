@@ -12,6 +12,19 @@
 	The string is : 01-02-2006 15:04:05 Monday
 
 	We can alternate the format to represent time.
+
+	Building Executables:
+
+	We can use the Go 'env' command to view all the environment variables for our go environment.
+	The main ones to focus while building are:
+		1. GOOS : target OS
+		2. GOARCH : target Architecture
+
+	So, when we run `go build`, it automatically searches for the main.go file and builds for the target OS.
+
+	If we want to generate files for other OS's we can change the go env variables. GOOS = linux or GOOS = darwin (for Mac)
+
+	`go help build` shows us all flags and options for the build function.
 */
 package main
 
@@ -27,4 +40,7 @@ func main() {
 	fmt.Println(presentTime.Format("01-02-2006 15:04:05 Monday")) // mm - dd - yyyy time day
 	fmt.Println(presentTime.Format("01/02/2006"))                 // mm / dd / yyyy
 
+	time.Sleep(10 * time.Second)
+
+	fmt.Println("Bye!")
 }
