@@ -26,22 +26,25 @@ package main
 
 import "fmt"
 
+// Global constant
 const globalVar = 320
 
 func main() {
 
-	// Variables
+	// Ways of initialising Variables
+	// ** In Go, if you init a variable and dont use it, then it raises error **
 
 	// 1st Way
-	// In Go, if you init a variable and dont use it, then it raises error
-
+	// Proper declaration and initialisation
+	// Read as:
+	// Declaring a 'variable' called 'username' that is of type 'string' and takes value "thakreyn"
 	var username string = "thakreyn"
 
 	fmt.Println(username)
+	// %T is used to print type of a variable
 	fmt.Printf("Variable type : %T\n", username)
 
 	var isGood bool = false
-
 	fmt.Println(isGood)
 	fmt.Printf("Variable type : %T\n", isGood)
 
@@ -51,7 +54,7 @@ func main() {
 	fmt.Println(a, b, c)
 
 	// Numbers specs can be seen in Golang docs under lang specs in Numeric Types
-
+	// int has multiple sub types according to the need
 	var smallVal int = 24
 	fmt.Println(smallVal)
 	fmt.Printf("Variable type : %T\n", smallVal)
@@ -63,10 +66,11 @@ func main() {
 	fmt.Printf("Variable type : %T\n", smallFloat)
 
 	// Default values and Aliases
-	// Instead of storing garbage values, it defaults to certain values
+	// Instead of storing garbage values, all variables/types default to certain DEFAULT values
 	// int, float -> 0
 	// string -> ""
 	// bool -> false
+	// pointers -> nil
 
 	var randomVariable bool
 	fmt.Println(randomVariable)
@@ -75,8 +79,8 @@ func main() {
 	// 2nd Way
 	// Implicit Types
 	// var <var-name> = <value>
-	// Thus, Go interprets the datatype from assignment
-	// float -> float64
+	// Thus, Go interprets/implies the datatype from assignment
+	// float is interpreted as float64
 	// Once Go has decided/interpretted a type, it cannot be changed
 
 	var siteName = "thakreyn.in"
@@ -92,7 +96,8 @@ func main() {
 	fmt.Printf("Variable type : %T\n", userName)
 
 	// Using a global variable
-
 	fmt.Println(globalVar)
+
+	// It is always neccesary to assign a value at declaration for constants
 
 }

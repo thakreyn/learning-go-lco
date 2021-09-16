@@ -1,4 +1,4 @@
-# Time Management in Go
+# Memory Management in Go
 
 In Golang, memory management happens automatically in Go.
 The allocation and de-allocation happens automatically.

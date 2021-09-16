@@ -39,12 +39,13 @@ func main() {
 	// Initializes a time object
 	presentTime := time.Now()
 
+	// Print the time in different formats
 	fmt.Println(presentTime.Format("01-02-2006 15:04:05 Monday")) // mm - dd - yyyy time day
 	fmt.Println(presentTime.Format("01/02/2006"))                 // mm / dd / yyyy
 
+	// Sleep function is one of many in time package
 	time.Sleep(10 * time.Second)
 
 	fmt.Println(presentTime)
-
-	fmt.Println("Bye!")
+	// Time package has its own data types for seconds, weeks, days etc
 }
