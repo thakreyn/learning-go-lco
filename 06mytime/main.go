@@ -1,7 +1,7 @@
 /*
-	Time package
+	Time package and building Executables
 
-	This package is used for functionality of time in Go.
+	'time' package is used for functionality of time in Go.
 	It provides us with a time object, ability to do operations on time and store time related information.
 
 	We can check the documentation for additional information about the package.
@@ -15,7 +15,7 @@
 
 	Building Executables:
 
-	We can use the Go 'env' command to view all the environment variables for our go environment.
+	We can use the 'go env' command to view all the environment variables for our go environment.
 	The main ones to focus while building are:
 		1. GOOS : target OS
 		2. GOARCH : target Architecture
@@ -39,12 +39,13 @@ func main() {
 	// Initializes a time object
 	presentTime := time.Now()
 
+	// Print the time in different formats
 	fmt.Println(presentTime.Format("01-02-2006 15:04:05 Monday")) // mm - dd - yyyy time day
 	fmt.Println(presentTime.Format("01/02/2006"))                 // mm / dd / yyyy
 
+	// Sleep function is one of many in time package
 	time.Sleep(10 * time.Second)
 
 	fmt.Println(presentTime)
-
-	fmt.Println("Bye!")
+	// Time package has its own data types for seconds, weeks, days etc
 }
