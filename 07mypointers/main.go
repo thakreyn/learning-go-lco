@@ -14,6 +14,10 @@
 
 	Thus pointers allow us to pass arounf the memory location or addresses of variables,
 	so that we can make changes directly to that memory.
+
+	Following is a good resource that covers almost everything related to pointers and how they
+	can be used.
+		https://youtu.be/sTFJtxJXkaY
 */
 
 package main

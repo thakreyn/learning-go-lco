@@ -1,7 +1,7 @@
 /*
 	Time package
 
-	This package is used to use the functionality of time in Go.
+	This package is used for functionality of time in Go.
 	It provides us with a time object, ability to do operations on time and store time related information.
 
 	We can check the documentation for additional information about the package.
@@ -26,6 +26,7 @@
 
 	`go help build` shows us all flags and options for the build function.
 */
+
 package main
 
 import (
@@ -35,12 +36,15 @@ import (
 
 func main() {
 
+	// Initializes a time object
 	presentTime := time.Now()
 
 	fmt.Println(presentTime.Format("01-02-2006 15:04:05 Monday")) // mm - dd - yyyy time day
 	fmt.Println(presentTime.Format("01/02/2006"))                 // mm / dd / yyyy
 
 	time.Sleep(10 * time.Second)
+
+	fmt.Println(presentTime)
 
 	fmt.Println("Bye!")
 }

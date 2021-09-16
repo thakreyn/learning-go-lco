@@ -9,13 +9,14 @@ The 2 main commands/keywords are:
 
 > zeroed storage is storage where you can not place data.
 
-The Garbage Collection takes place automatically using the `GC`.
+The Garbage Collection takes place automatically using the `GC` or `Garabage Collector`.
 Anything that becomes useless/out of scope or Nil. It is taken care of using GC.
 
 The information about all this can be found in the `runtime` package.
 This package contains all the information about the system settings, envs,
 and hardware.
 
-The `GOGC` variable in `go env` sets the garbage collection percentage. By default it is 100,but can be changed using runtime functions.
+The `GOGC` variable in `go env` sets the garbage collection percentage. By default it is 100, but
+can be changed using runtime functions.
 
 Another important aspect in Go, for handling memory is Pointers.
