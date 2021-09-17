@@ -29,6 +29,7 @@ func main() {
 
 	arr[0] = 12
 	arr[6] = 101
+	fmt.Printf("Type of arrays is : %T\n", arr)
 
 	// We can directly print out the array
 	fmt.Println(arr)
