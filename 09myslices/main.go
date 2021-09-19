@@ -12,6 +12,11 @@
 	for searching items.
 
 	We can always refer to the documentation if we need to look into the finer details of any topic.
+
+	** MUST READ **
+	1. https://go.dev/blog/slices-intro
+	2. https://gobyexample.com/slices
+
 */
 package main
 
@@ -95,5 +100,16 @@ func main() {
 
 	// We can use cap() to find out capacity of  a datatype
 	fmt.Println(cap(x))
+
+	// Removing values from slices based on index
+	// For removing, we use the append method
+	cars := []string{"merc", "beemer", "audi", "porsche", "mclaren"}
+	fmt.Println(cars)
+
+	var index int = 2
+
+	// we use slicing to take first part and then append the remaining (use of 3 dots)
+	cars = append(cars[:index], cars[index+1:]...)
+	fmt.Println(cars)
 
 }
