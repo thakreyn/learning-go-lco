@@ -1,5 +1,12 @@
 /*
 	Performing Requests and analyzing/parsing them in Go lang.
+
+	The following Script needs a server to run. For this program , I have
+	made a Flask API/Server that sends responses and is hosted on http://127.0.0.1:5000
+
+	1. GET / => Returns a string
+	2. GET /get => Returns a JSON
+	3. POST /post => Echoes the same JSON that was sent
 */
 package main
 
@@ -13,7 +20,10 @@ import (
 func main() {
 	fmt.Println("Web Request Verbs")
 
-	PerformGetRequest("http://127.0.0.1:5000/")
+	const url string = "http://127.0.0.1:5000/post"
+
+	// PerformGetRequest(url)
+	PerformPostJsonRequest(url)
 }
 
 // Function that performs a GET request to the given URL
@@ -49,6 +59,35 @@ func PerformGetRequest(myurl string) {
 	fmt.Println(responseString.String())
 
 	// Or
+	fmt.Println(string(byteData))
+
+}
+
+// Perform a POST request and send a JSON payload
+func PerformPostJsonRequest(myurl string) {
+
+	// Creating a JSON (in string format) and storing it in Reader format
+	requestBody := strings.NewReader(`
+	{
+		"Name" : "CRY",
+		"Age" : 20,
+		"Height" : "6 feet"
+	}
+	`)
+
+	// Making a post request
+	response, err := http.Post(myurl, "application/json", requestBody)
+
+	if err != nil {
+		panic(err)
+	}
+	// ALWAYS REMEMBER TO CLOSE CONNECTION MANUALLY
+	defer response.Body.Close()
+
+	// Reading the response body in byte format
+	byteData, _ := ioutil.ReadAll(response.Body)
+
+	// Print the response body in string format
 	fmt.Println(string(byteData))
 
 }
